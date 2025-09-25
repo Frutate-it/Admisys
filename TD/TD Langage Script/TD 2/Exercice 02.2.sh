@@ -28,7 +28,7 @@ case $user in
     puser="7" ;;
   *)
   echo -e "Erreur de saisie, merci de saisir des droits d'exécution sous la forme rwx, rw, r, x."
-  echo "Pour rappel, r signifie lecture, w signifie écriture et x signifie exécution\n" ;;
+  echo -e "Pour rappel, r = lecture, w = écriture et x = exécution\n" ;;
 esac
 
 #Demande des droits du groupe
@@ -57,7 +57,7 @@ case $groupe in
     pgroupe="7" ;;
   *)
   echo -e "Erreur de saisie, merci de saisir des droits d'exécution sous la forme rwx, rw, r, x."
-  echo "Pour rappel, r signifie lecture, w signifie écriture et x signifie exécution\n" ;;
+  echo -e "Pour rappel, r = lecture, w = écriture et x = exécution\n" ;;
 esac
 
 #Demande du droit des autres utilisateurs
@@ -86,7 +86,7 @@ case $autre in
     pautre="7" ;;
   *)
   echo -e "Erreur de saisie, merci de saisir des droits d'exécution sous la forme rwx, rw, r, x."
-  echo "Pour rappel, r signifie lecture, w signifie écriture et x signifie exécution\n" ;;
+  echo -e "Pour rappel, r = lecture, w = écriture et x = exécution\n" ;;
 esac
 
 #Calcul du umask via soustraction
@@ -103,8 +103,8 @@ echo -e "Le umask choisi pour la session en cours est $uuser$ugroupe$uautre.\n"
 #modification du umask
 echo -n "#Pour une modification permanente, il faut dé commenter la ligne "
 echo -e "echo \"umask $umaskchoisi\" >> ~/.bashrc dans le script et l'exécuter de nouveau.\n"
-
 #echo "umask $umaskchoisi" >> ~/.bashrc
+
 umask $umaskchoisi
 echo "Vérification du umask après modification :"
 umask

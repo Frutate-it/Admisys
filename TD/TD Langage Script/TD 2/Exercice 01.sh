@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#recuperation de l'adresse ip et mise en forme pour les contenir dans 4 variables
+#Récuperation de l'adresse ip et mise en forme pour les contenir dans 4 variables
 IFS='.' read -p "Saisir l'adresse ip sous forme de 4 octets 255.255.255.255 : " o1 o2 o3 o4
 
-#boucle qui permet de vérifier que chaque octet est bien compris entre 0 et 255 et qui affiche un message d'erreur sinon
+#Boucle qui permet de vérifier que chaque octet est bien compris entre 0 et 255 et qui affiche un message d'erreur sinon
 for ((i=1;i<=4;i++)); do
   oi="o$i"
   octet=${!oi}

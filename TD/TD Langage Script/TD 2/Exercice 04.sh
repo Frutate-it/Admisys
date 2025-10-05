@@ -4,9 +4,9 @@
 cp /etc/passwd ~/passwd.txt
 
 #changement des droits
-cd "~"
+cd ~
 chmod 666 "passwd.txt"
 
 #tri du fichier par ordre décroissant
-cd "~"
+cd ~
 sort -r "passwd.txt"

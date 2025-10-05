@@ -4,7 +4,7 @@ echo "Question 1"
 find ~ -type f -name "*bash*"
 
 echo "Question 2"
-find ~ -type f -mmin 30
+find ~ -type f -mmin -30
 
 echo "Question 3"
 find /usr -type f -size +2M

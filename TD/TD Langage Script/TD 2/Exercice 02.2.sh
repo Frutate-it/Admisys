@@ -95,7 +95,7 @@ ugroupe=$((7-pgroupe))
 uautre=$((7-pautre))
 
 #création de la valeur du umask
-umaskchoisi="$uCopier-coller depuis un IDE : Certains IDE (VS Code, Sublime, PyCharm…) permettent de copier le code avec la mise en forme (couleurs, indentations) et de le coller dans Word.user$ugroupe$uautre"
+umaskchoisi="$uuser$ugroupe$uautre"
 
 #Affichage du umask choisi
 echo -e "Le umask choisi pour la session en cours est $uuser$ugroupe$uautre.\n"
